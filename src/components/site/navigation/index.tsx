@@ -1,6 +1,7 @@
 import { UserButton } from "@clerk/nextjs";
 import { User } from "@clerk/nextjs/server";
 import Link from "next/link";
+import ThemeToggle from "~/components/global/theme-toggle";
 
 type Props = {
   user?: null | User;
@@ -11,7 +12,7 @@ const Navigation = ({ user }: Props) => {
     <div className=" p-4 flex items-center justify-between relative">
       <aside>
         <Link href="/" className=" text-xl font-bold">
-          Dorik
+          Dorik.
         </Link>
       </aside>
 
@@ -22,14 +23,16 @@ const Navigation = ({ user }: Props) => {
         <Link href="/feature">Feature</Link>
       </nav>
 
-      <aside>
+      <aside className=" flex items-center gap-2">
         <Link
           href="/agency"
           className=" bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80"
         >
           Login
         </Link>
+
         <UserButton />
+        <ThemeToggle />
       </aside>
     </div>
   );
