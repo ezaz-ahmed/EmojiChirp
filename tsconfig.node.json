@@ -25,6 +25,8 @@
      "paths": {
        "@sections/*": ["./sections/*"],
        "@components/*": ["./components/*"],
+       "@constants/*": ["./constants/*"],
+       "@icons/*": ["./icons/*"],
      }
   },
   "include": ["vite.config.ts"]
