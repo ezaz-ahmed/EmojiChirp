@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { FC, memo, ReactNode } from 'react'
 import clsx from 'clsx'
 import { Marker } from './Marker'
 
@@ -6,20 +6,13 @@ interface ButtonProps {
   icon?: string
   children: ReactNode
   href?: string
-  containerClassName?: string
-  onClick?: () => void
+  className?: string
+  onClick?: () => Promise<void> | void
   markerFill?: string
 }
 
-const Button: FC<ButtonProps> = ({
-  icon,
-  children,
-  href,
-  containerClassName,
-  onClick,
-  markerFill,
-}) => {
-  const Inner = () => (
+const Inner: FC<{ icon?: string; children: ReactNode; markerFill?: string }> =
+  memo(({ icon, children, markerFill }) => (
     <>
       <span className='relative flex items-center min-h-[60px] px-4 g4 rounded-2xl inner-before group-hover:before:opacity-100 overflow-hidden'>
         <span className='absolute -left-[1px]'>
@@ -29,7 +22,7 @@ const Button: FC<ButtonProps> = ({
         {icon && (
           <img
             src={icon}
-            alt='circle'
+            alt='button icon'
             className='size-10 mr-5 object-contain z-10'
           />
         )}
@@ -41,27 +34,41 @@ const Button: FC<ButtonProps> = ({
 
       <span className='glow-before glow-after' />
     </>
-  )
+  ))
 
+const Button: FC<ButtonProps> = ({
+  icon,
+  children,
+  href,
+  className,
+  onClick,
+  markerFill,
+}) => {
   return href ? (
     <a
       className={clsx(
         'relative p-0.5 g5 rounded-2xl shadow-500 group',
-        containerClassName
+        className
       )}
       href={href}
+      rel='noopener noreferrer'
     >
-      <Inner />
+      <Inner icon={icon} markerFill={markerFill}>
+        {children}
+      </Inner>
     </a>
   ) : (
     <button
+      aria-label={children ? children.toString() : 'Button'}
       className={clsx(
         'relative p-0.5 g5 rounded-2xl shadow-500 group',
-        containerClassName
+        className
       )}
       onClick={onClick}
     >
-      <Inner />
+      <Inner icon={icon} markerFill={markerFill}>
+        {children}
+      </Inner>
     </button>
   )
 }

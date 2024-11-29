@@ -19,8 +19,7 @@ const Hero = () => {
     const interval = setInterval(() => {
       setCaptionText((prevText) => {
         const currentIndex = texts.indexOf(prevText)
-        const nextIndex = (currentIndex + 1) % texts.length
-        return texts[nextIndex]
+        return texts[(currentIndex + 1) % texts.length]
       })
     }, 3000)
 
