@@ -34,6 +34,7 @@ const Download = () => {
                   >
                     <a
                       href={url}
+                      rel='noopener noreferrer'
                       className='size-22 download_tech-icon_before relative flex items-center justify-center rounded-half border-2 border-s3 bg-s1 transition-borderColor duration-500'
                     >
                       <span className='absolute -top-2 rotate-90'>
@@ -41,7 +42,7 @@ const Download = () => {
                       </span>
                       <img
                         src={'/images/lines.svg'}
-                        alt='lines'
+                        alt='Decorative lines'
                         className='absolute size-13/20 object-contain'
                       />
                       <span className='download_tech-icon'>{icon}</span>

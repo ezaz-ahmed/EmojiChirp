@@ -21,12 +21,14 @@ const Pricing = () => {
               <button
                 className={clsx('pricing-head_btn', monthly && 'text-p4')}
                 onClick={() => setMonthly(true)}
+                aria-label='Switch to Monthly Pricing'
               >
                 Monthly
               </button>
               <button
                 className={clsx('pricing-head_btn', !monthly && 'text-p4')}
                 onClick={() => setMonthly(false)}
+                aria-label='Switch to Annual Pricing'
               >
                 Annual
               </button>
@@ -57,7 +59,6 @@ const Pricing = () => {
             </div>
           </div>
 
-          {/*  pricing section*/}
           <div className='scroll-hide relative z-2 -mt-12 flex items-start max-xl:gap-5 max-xl:overflow-auto max-xl:pt-6'>
             {plans.map((plan, index) => (
               <div
