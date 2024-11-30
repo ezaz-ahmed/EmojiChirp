@@ -1,10 +1,7 @@
 import { FC, memo } from 'react'
+import { IconProps } from './icon.type'
 
-interface MarkerProps {
-  fill?: string
-}
-
-export const Marker: FC<MarkerProps> = memo(({ fill = '#2EF2FF' }) => {
+export const Marker: FC<IconProps> = memo(({ fill = '#2EF2FF' }) => {
   return (
     <svg
       width='8'

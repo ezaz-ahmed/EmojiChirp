@@ -101,7 +101,10 @@ const Header = () => {
                 <li className='nav-li'>
                   <NavLink title='faq' offset={windowWidth < 768 ? 15 : 15} />
                   <div className='dot' />
-                  <NavLink title='download' />
+                  <NavLink
+                    title='download'
+                    offset={windowWidth < 768 ? -250 : -70}
+                  />
                 </li>
               </ul>
             </nav>

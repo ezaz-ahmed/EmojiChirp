@@ -1,6 +1,6 @@
 import { FC, memo, ReactNode } from 'react'
 import clsx from 'clsx'
-import { Marker } from './Marker'
+import { Marker } from '@icons/Marker'
 
 interface ButtonProps {
   icon?: string
