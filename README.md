@@ -1,50 +1,92 @@
-# React + TypeScript + Vite
+# Xorik
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Xorik simplifies collaboration for teams with screen recordings, feedback tools, and transcriptions. It enables seamless communication and remote collaboration, helping teams stay connected and productive.
 
-Currently, two official plugins are available:
+## What is Xorik?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Xorik is an all-in-one platform designed for remote teams, educators, and product teams. It allows users to record screens, provide feedback, annotate videos, and transcribe discussions—all within a simple interface that enhances team collaboration. Whether you are discussing product features, conducting remote meetings, or creating tutorials, Xorik makes communication clearer and more efficient.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Screen Recordings**: Capture your screen and share visual feedback with your team.
+- **Feedback & Annotations**: Leave comments and annotations on videos to guide your team's work.
+- **Transcriptions**: Automatically generate transcriptions for your video recordings to improve accessibility and understanding.
+- **Easy Integration**: Seamlessly integrates with your existing workflow and tools.
+- **Team Collaboration**: Invite your team members and collaborate in real-time.
 
-- Configure the top-level `parserOptions` property like this:
+## Author
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+This project is created and maintained by [Ezaz Ahmed](https://github.com/ezaz-ahmed).
+
+## Project GitHub
+
+You can access the project's repository here: [Xorik GitHub](https://github.com/ezaz-ahmed/xorik).
+
+## File Structure
+
+Here’s an overview of the directory structure for the Xorik project:
+
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+/Xorik
+├── /.husky
+├── /.vscode
+├── /public
+├── /src
+│ ├── /components
+│ ├── /sections
+│ ├── /icons
+│ ├── /types
+│ └── /App.tsx
+│ └── /index.css
+│ └── /main.tsx
+│ └── /vite-env.d.ts
+├── .eslintignore
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── pnpm-lock.yaml
+├── postcss.config.ts
+├── README.md
+├── tailwind.config.ts
+└── tsconfig.app.json
+└── tsconfig.json
+└── tsconfig.node.json
+└── vite.config.ts
 ```
+
+## Installation
+
+To get started with Xorik locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/ezaz-ahmed/xorik.git
+   ```
+
+2. Install the necessary dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm start
+   ```
+
+The app will be available at [http://localhost:5173](http://localhost:5173).
+
+## Acknowledgements
+
+- [React](https://reactjs.org/)
+- [Vite](https://vite.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Lodash](https://lodash.com/)
+
+## Contact
+
+For any questions or inquiries, feel free to reach out via GitHub Issues or by contacting me directly at [contact@ezaz.dev](mailto:contact@ezaz.dev).
