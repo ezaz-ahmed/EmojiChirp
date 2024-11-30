@@ -2,8 +2,18 @@ import { Android } from '@icons/Android'
 import { Ios } from '@icons/Ios'
 import { Web } from '@icons/Web'
 import { Windows } from '@icons/Windows'
+import {
+  Detail,
+  FAQ,
+  Feature,
+  Logo,
+  Plan,
+  Social,
+  Testimonial,
+  Link,
+} from '../types'
 
-export const features = [
+export const features: Feature[] = [
   {
     id: '0',
     icon: '/images/feature-1.png',
@@ -28,7 +38,7 @@ export const features = [
   },
 ]
 
-export const details = [
+export const details: Detail[] = [
   {
     id: '0',
     icon: '/images/detail-1.png',
@@ -51,70 +61,70 @@ export const details = [
   },
 ]
 
-export const faq = [
+export const faq: FAQ[] = [
   {
     id: '0',
-    question: 'How easy is it to setup Xorik?',
+    question: 'How easy is it to set up Xorik?',
     answer:
-      'Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.',
+      'Setting up Xorik is a breeze! Just sign up, invite your team, and start simplifying your collaboration with screen recordings and transcriptions right away.',
   },
   {
     id: '1',
-    question: 'Can I integrate Xorik with other platforms?',
+    question: 'Can I integrate Xorik with other tools?',
     answer:
-      'Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.',
+      'Yes! Xorik integrates seamlessly with your favorite tools, ensuring your workflows remain uninterrupted and efficient.',
   },
   {
     id: '2',
-    question: 'How often do you add new content?',
+    question: 'Does Xorik support real-time collaboration?',
     answer:
-      'Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.',
+      'Absolutely! With Xorik, teams can collaborate in real-time by sharing feedback and annotations on screen recordings effortlessly.',
   },
   {
     id: '3',
-    question: 'What your refund policy?',
+    question: 'What is your refund policy?',
     answer:
-      'Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.',
+      'We offer a 30-day money-back guarantee. If Xorik doesn’t meet your expectations, you can request a refund within the first month of your subscription.',
   },
   {
     id: '4',
-    question: 'Do you have corporate plans?',
+    question: 'Do you offer corporate or team plans?',
     answer:
-      'Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.',
+      'Yes, we do! Xorik offers scalable plans designed specifically for teams and organizations to support seamless collaboration.',
   },
   {
     id: '5',
-    question: 'What happens when I’m out of storage?',
+    question: 'What happens when I run out of storage?',
     answer:
-      'Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.',
+      'If you exceed your storage limit, you can easily upgrade your plan or manage your recordings to free up space. We’ll always notify you before you hit the limit.',
   },
   {
     id: '6',
-    question: 'Can I upgrade my plan?',
+    question: 'Can I upgrade my plan later?',
     answer:
-      'Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.',
+      'Of course! You can upgrade your plan at any time, and we’ll apply a prorated adjustment to ensure you get the best value.',
   },
   {
     id: '7',
-    question: 'How do I invite my team?',
+    question: 'How do I invite my team to Xorik?',
     answer:
-      'Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.',
+      'Inviting your team is simple. Go to the “Team” section in your account, enter their email addresses, and send out invites—it’s that easy!',
   },
   {
     id: '8',
-    question: 'Do you offer training for individuals and teams?',
+    question: 'Do you provide training for teams and individuals?',
     answer:
-      'Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.',
+      'Yes! We offer onboarding resources and training sessions to help teams and individuals make the most of Xorik’s features.',
   },
   {
     id: '9',
-    question: 'I’m locked out of my account what do I do?',
+    question: 'What should I do if I’m locked out of my account?',
     answer:
-      'Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.',
+      'If you’re locked out, click “Forgot Password” on the login page to reset your password. For further assistance, our 24/7 support team is here to help.',
   },
 ]
 
-export const plans = [
+export const plans: Plan[] = [
   {
     id: '0',
     title: 'Core',
@@ -162,7 +172,7 @@ export const plans = [
   },
 ]
 
-export const testimonials = [
+export const testimonials: Testimonial[] = [
   {
     id: '0',
     name: 'Jessica Saunders',
@@ -213,7 +223,7 @@ export const testimonials = [
   },
 ]
 
-export const logos = [
+export const logos: Logo[] = [
   {
     id: '0',
     title: 'Afterpay',
@@ -251,7 +261,7 @@ export const logos = [
   },
 ]
 
-export const links = [
+export const links: Link[] = [
   {
     id: '0',
     title: 'Ios',
@@ -278,7 +288,7 @@ export const links = [
   },
 ]
 
-export const socials = [
+export const socials: Social[] = [
   {
     id: '0',
     title: 'x',

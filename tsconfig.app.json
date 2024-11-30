@@ -29,6 +29,7 @@
       "@components/*": ["./components/*"],
       "@constants/*": ["./constants/*"],
       "@icons/*": ["./icons/*"],
+      "@types/*": ["./types/*"],
     }
   },
   "include": ["src"]

@@ -9,12 +9,11 @@ const Header = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth)
-
+    const handleResize = debounce(() => setWindowWidth(window.innerWidth), 100)
     window.addEventListener('resize', handleResize)
-
     return () => {
       window.removeEventListener('resize', handleResize)
+      handleResize.cancel()
     }
   }, [])
 
@@ -76,7 +75,7 @@ const Header = () => {
                   <div className='dot' />
                   <NavLink
                     title='pricing'
-                    offset={windowWidth < 768 ? -50 : 5}
+                    offset={windowWidth < 768 ? -30 : 10}
                   />
                 </li>
 
@@ -100,7 +99,7 @@ const Header = () => {
                 </li>
 
                 <li className='nav-li'>
-                  <NavLink title='faq' />
+                  <NavLink title='faq' offset={windowWidth < 768 ? 15 : 15} />
                   <div className='dot' />
                   <NavLink title='download' />
                 </li>
