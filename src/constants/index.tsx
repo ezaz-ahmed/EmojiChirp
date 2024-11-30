@@ -1,7 +1,7 @@
-import { Android } from '@icons/Android'
-import { Ios } from '@icons/Ios'
-import { Web } from '@icons/Web'
-import { Windows } from '@icons/Windows'
+import { Android } from '@icons/Android';
+import { Ios } from '@icons/Ios';
+import { Web } from '@icons/Web';
+import { Windows } from '@icons/Windows';
 import {
   Detail,
   FAQ,
@@ -11,7 +11,7 @@ import {
   Social,
   Testimonial,
   Link,
-} from '../types'
+} from '../types';
 
 export const features: Feature[] = [
   {
@@ -36,7 +36,7 @@ export const features: Feature[] = [
       title: 'Read the docs',
     },
   },
-]
+];
 
 export const details: Detail[] = [
   {
@@ -59,7 +59,7 @@ export const details: Detail[] = [
     icon: '/images/detail-4.png',
     title: '24 / 7 Customer support',
   },
-]
+];
 
 export const faq: FAQ[] = [
   {
@@ -122,7 +122,7 @@ export const faq: FAQ[] = [
     answer:
       'If you’re locked out, click “Forgot Password” on the login page to reset your password. For further assistance, our 24/7 support team is here to help.',
   },
-]
+];
 
 export const plans: Plan[] = [
   {
@@ -170,7 +170,7 @@ export const plans: Plan[] = [
     icon: '/images/hexagon.svg',
     logo: '/images/plan-3.png',
   },
-]
+];
 
 export const testimonials: Testimonial[] = [
   {
@@ -221,7 +221,7 @@ export const testimonials: Testimonial[] = [
     comment:
       'The efficiency boost is undeniable. This platform has transformed our workflow, forever.',
   },
-]
+];
 
 export const logos: Logo[] = [
   {
@@ -259,7 +259,7 @@ export const logos: Logo[] = [
     width: 77,
     height: 48,
   },
-]
+];
 
 export const links: Link[] = [
   {
@@ -286,7 +286,7 @@ export const links: Link[] = [
     icon: <Web />,
     url: '#',
   },
-]
+];
 
 export const socials: Social[] = [
   {
@@ -313,4 +313,4 @@ export const socials: Social[] = [
     icon: '/images/socials/discord.svg',
     url: '#',
   },
-]
+];

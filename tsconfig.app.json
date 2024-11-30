@@ -23,13 +23,13 @@
     "noUncheckedSideEffectImports": true,
 
     /* Path Alias */
-    "baseUrl" : "./src",
+    "baseUrl": "./src",
     "paths": {
       "@sections/*": ["./sections/*"],
       "@components/*": ["./components/*"],
       "@constants/*": ["./constants/*"],
       "@icons/*": ["./icons/*"],
-      "@types/*": ["./types/*"],
+      "@types/*": ["./types/*"]
     }
   },
   "include": ["src"]

@@ -20,15 +20,15 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-     /* Path Alias */
-     "baseUrl" : "./src",
-     "paths": {
-       "@sections/*": ["./sections/*"],
-       "@components/*": ["./components/*"],
-       "@constants/*": ["./constants/*"],
-       "@icons/*": ["./icons/*"],
-       "@types/*": ["./types/*"],
-     }
+    /* Path Alias */
+    "baseUrl": "./src",
+    "paths": {
+      "@sections/*": ["./sections/*"],
+      "@components/*": ["./components/*"],
+      "@constants/*": ["./constants/*"],
+      "@icons/*": ["./icons/*"],
+      "@types/*": ["./types/*"]
+    }
   },
   "include": ["vite.config.ts"]
 }

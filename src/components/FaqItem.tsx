@@ -1,32 +1,32 @@
-import { FC, useState } from 'react'
-import clsx from 'clsx'
-import { SlideDown } from 'react-slidedown'
-import 'react-slidedown/lib/slidedown.css'
-import { FAQ } from '../types'
+import { FC, useState } from 'react';
+import clsx from 'clsx';
+import { SlideDown } from 'react-slidedown';
+import 'react-slidedown/lib/slidedown.css';
+import { FAQ } from '../types';
 
 interface FaqItemProps {
-  item: FAQ
-  index: number
+  item: FAQ;
+  index: number;
 }
 
 const FaqItem: FC<FaqItemProps> = ({ item, index }) => {
-  const [activeId, setActiveId] = useState<string | null>(null)
+  const [activeId, setActiveId] = useState<string | null>(null);
 
-  const active = activeId === item.id
+  const active = activeId === item.id;
 
   return (
-    <div className='relative z-2 mb-16'>
+    <div className="relative z-2 mb-16">
       <div
-        className='group relative flex cursor-pointer items-center justify-between gap-10 px-7'
+        className="group relative flex cursor-pointer items-center justify-between gap-10 px-7"
         onClick={() => {
-          setActiveId(activeId === item.id ? null : item.id)
+          setActiveId(activeId === item.id ? null : item.id);
         }}
         aria-expanded={active}
         aria-controls={`faq-answer-${item.id}`}
         id={`faq-question-${item.id}`}
       >
-        <div className='flex-1'>
-          <div className='small-compact mb-1.5 text-p3 max-lg:hidden'>
+        <div className="flex-1">
+          <div className="small-compact mb-1.5 text-p3 max-lg:hidden">
             {index < 10 ? '0' : ''}
             {index}
           </div>
@@ -46,13 +46,13 @@ const FaqItem: FC<FaqItemProps> = ({ item, index }) => {
             active && 'before:bg-p1 after:rotate-0 after:bg-p1'
           )}
         >
-          <div className='g4 size-11/12 rounded-full shadow-300' />
+          <div className="g4 size-11/12 rounded-full shadow-300" />
         </div>
       </div>
 
       <SlideDown>
         {activeId === item.id && (
-          <div className='body-3 px-7 py-3.5'>{item.answer}</div>
+          <div className="body-3 px-7 py-3.5">{item.answer}</div>
         )}
       </SlideDown>
 
@@ -62,11 +62,11 @@ const FaqItem: FC<FaqItemProps> = ({ item, index }) => {
           active && 'opacity-100'
         )}
       >
-        <div className='g4 absolute inset-0.5 -z-1 rounded-3xl' />
-        <div className='absolute left-8 top-0 h-0.5 w-40 bg-p1' />
+        <div className="g4 absolute inset-0.5 -z-1 rounded-3xl" />
+        <div className="absolute left-8 top-0 h-0.5 w-40 bg-p1" />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FaqItem
+export default FaqItem;
